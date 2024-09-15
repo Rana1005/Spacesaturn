@@ -11,17 +11,17 @@ class CandidateCertificateAdmin(admin.ModelAdmin):
     # Specify the fields to display in the list view
     list_display = (
         'name', 'space_id', 'certificate_id', 'father_name', 'mother_name', 
-        'dca', 'dtp', 'tally', 'manual_accounting', 'gst', 'marks', 'course', 'image'
+        'cs_fundamental_window', 'ms_word', 'ms_excel', 'ms_powerpoint', 'ms_outlook_internet','ms_access','man_acc_tally_erp','pagemaker_photoshop_gst_coreldraw', 'marks', 'course', 'image'
     )
     
     # Fields to show on the form view
     fields = (
         'name', 'space_id', 'certificate_id', 'father_name', 'mother_name', 
-        'dca', 'dtp', 'tally', 'manual_accounting', 'gst', 'marks', 'course'
+        'cs_fundamental_window', 'ms_word', 'ms_excel', 'ms_powerpoint', 'ms_outlook_internet','ms_access','man_acc_tally_erp','pagemaker_photoshop_gst_coreldraw', 'marks', 'course', 'image'
     )
     
     # Make `marks` read-only since it's calculated automatically
-    readonly_fields = ('marks',)
+    readonly_fields = ('marks','certificate_id')
     
     # Enable search by name, father name, or certificate ID
     search_fields = ('name', 'father_name', 'certificate_id')
